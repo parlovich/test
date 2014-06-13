@@ -23,7 +23,7 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
-  <context-param>
+<!--   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
       classpath*:META-INF/spring-context.xml,
@@ -35,11 +35,12 @@
     <listener-class>
       org.springframework.web.context.ContextLoaderListener
     </listener-class>
-  </listener>
+  </listener> -->
 
   <servlet>
     <servlet-name>CXFServlet</servlet-name>
-    <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+    <!-- <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class> -->
+    <servlet-class>org.apache.cxf.transport.servlet.CXFNonSpringServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
 
